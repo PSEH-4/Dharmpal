@@ -1,0 +1,19 @@
+package com.sapient.football
+
+import javax.ws.rs.GET
+import javax.ws.rs.Path
+import com.sapient.football.TeamResourceService
+
+import javax.xml.ws.Response
+
+@Path("teams")
+class TeamResource{
+
+    def teamResourceService
+
+    @GET
+    Response getAll(){
+        ok teamResourceService.getAll()
+    }
+
+}
